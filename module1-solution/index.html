@@ -15,7 +15,7 @@
     <h1>Items for Lunch</h1>
     <p> We do not consider empty items! </p>
     <div ng-controller='LunchCheckController'>
-      <input type="text" ng-model="items" class="{{InpBorder}}" autofocus>
+      <input type="text" ng-model="items" class="{{InpBorder}}"  placeholder="List dishes for lunch separated by commas. For example, pizza, juice">
       <BR> <BR>
         <button type="button" name="button" ng-click="checkItems()">
             Check If Too Much

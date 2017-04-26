@@ -13,3 +13,6 @@ body {
 .greenborder {
   border: 1px solid #00FF00;
 }
+input {
+  width: 50%;
+}
