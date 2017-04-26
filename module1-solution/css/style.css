@@ -1,0 +1,15 @@
+body {
+  margin: 20px;
+}
+.red {
+  color: #FF0000;
+}
+.green {
+  color: #00FF00;
+}
+.redborder {
+  border: 1px solid #FF0000;
+}
+.greenborder {
+  border: 1px solid #00FF00;
+}
