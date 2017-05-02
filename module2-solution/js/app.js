@@ -6,7 +6,9 @@
 	.controller('AlreadyBoughtController', AlreadyBoughtController)
 	.service('ShoppingListCheckOffService',ShoppingListCheckOffService);
 
+
 	ToBuyController.$inject = ['ShoppingListCheckOffService'];
+
 	function ToBuyController(ShoppingListCheckOffService) {
 		this.items = ShoppingListCheckOffService.getToBuyItems();
 		this.bought = function(index) {
@@ -16,6 +18,7 @@
 
 
 	AlreadyBoughtController.$inject = ['ShoppingListCheckOffService'];
+	
 	function AlreadyBoughtController(ShoppingListCheckOffService){
 		this.items = ShoppingListCheckOffService.getAlreadyBoughtItems();
 	};
