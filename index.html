@@ -12,8 +12,9 @@
         {{val1}}
         {{name}} <BR>
         {{sayHello()}}<BR>
-          <input type="text" ng-model ="name">
+          <input type="text" ng-model ="name" ng-keyup="displayNum();">
           Inside my input is <B> {{name}} </B>
+          {{cost | currency : "hrn" : 8}}
     </div>
   </body>
 </html>
