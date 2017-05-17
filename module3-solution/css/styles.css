@@ -1,0 +1,18 @@
+body {
+	margin: 10px;
+}
+table {
+	margin-top: 15px;
+}
+th {
+	font-size: 0.8em;
+/*	text-align: center;*/
+}
+.warninfo {
+	color: #FF0000;
+}
+.removebtn {
+	width: 150px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}

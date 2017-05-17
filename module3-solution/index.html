@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app='NarrowItDownApp'>
+<head>
+	<title>Module 3 Solution</title>
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+  <div class="container" ng-controller="NarrowItDownController as cntrl">
+	<h1>Search of the menu item descriptions</h1>
+	<form class="form-horizontal">
+		<input type="text" ng-model="cntrl.searchstring" placeholder="Enter text for search" autofocus>
+		<button ng-click = "cntrl.buttonclick();">Narrow It Down For Me!</button>
+	</form>
+	
+	<div class="row">
+	<table class="table-striped  table-hover">
+		<thead ng-if="cntrl.items.length>0">
+		<tr>
+	
+			<th>Name </th>
+			<th>Description</th>
+			<th>Short Name</th>
+		</tr>
+		</thead>
+		<tr ng-repeat = "item in cntrl.items"> 
+		   <td> {{item.name}} </td>
+		   <td> {{item.description}} </td>
+		   <td> {{item.short_name}} 
+		   </td>
+			<td>
+				<button class="removebtn">Don't want this one!</button>
+			</td>	   
+		<tr>
+	</table>
+	</tr>
+
+	<div class="warninfo" ng-if="cntrl.warning !=='' "> {{cntrl.warning}}</div>
+
+  </div>
+</body>
+</html>
