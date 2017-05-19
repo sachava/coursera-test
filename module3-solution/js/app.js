@@ -10,7 +10,7 @@
 	
 	function foundItemsDirective () {
 		var ddo = {
-			templateUrl: "founditems.html",
+			templateUrl: "html/founditems.html",
 			 scope: {
 			 	items: '<myItems',
 			 	notEmpty: '<notEmpty',
