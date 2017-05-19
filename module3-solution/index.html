@@ -19,12 +19,12 @@
 	<table class="table-striped  table-hover">
 		<thead ng-if="cntrl.items.length>0">
 		<tr>
-	
 			<th>Name </th>
 			<th>Description</th>
 			<th>Short Name</th>
 		</tr>
 		</thead>
+		<found-item> </found-item>
 		<tr ng-repeat = "item in cntrl.items"> 
 		   <td> {{item.name}} </td>
 		   <td> {{item.description}} </td>
