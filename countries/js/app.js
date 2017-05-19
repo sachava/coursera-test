@@ -10,7 +10,7 @@ CountryController.$inject =['CountryService'];
 function CountryController(CountryService){
 	var cc=this;
  
-	cc.question = "Вы готовы пройти тест на знание столиц государств?";
+	cc.question = "Are you ready to take the test for knowledge of the capitals of countries?";
 
 	// cc.variants  = [ {name: "country1"}, 
 	// 				 {name: "country2"}, 
@@ -21,7 +21,7 @@ function CountryController(CountryService){
 
 	cc.variants =[];
 	cc.variantName = "";
-	cc.buttonName = "Начать тест";
+	cc.buttonName = "Start test";
 	cc.showRes = false;
 	cc.total =  0;
 	cc.rightAnswers = 0;
@@ -49,8 +49,8 @@ function CountryController(CountryService){
 
 	cc.nextQuest = function () {
 	    // CountryService.nextQuest(); 
-		if (cc.buttonName === "Начать тест") {
-				cc.buttonName = "Дальше";
+		if (cc.buttonName === "Start test") {
+				cc.buttonName = "Next";
 				cc.total =  CountryService.number_of_quests();
 		}
 
@@ -73,15 +73,15 @@ function CountryController(CountryService){
 		if (CountryService.getQuestNum() < CountryService.number_of_quests()) {
 			CountryService.nextQuest();
 			cc.countryName = CountryService.getName();
-			cc.question = "Какая столица государства " + cc.countryName + "?";
+			cc.question = "What is the capital of " + cc.countryName + "?";
 			cc.variants = CountryService.getChoices(cc.countryName);
 			
 		} else {
 			// show results boolean
 			cc.showRes = true;
-			cc.question = "Ваши результаты:"
+			cc.question = "Your results:"
 			cc.variants = [];
-			cc.buttonName = "Повторить тест";
+			cc.buttonName = "Retake test";
 		}
 	};
 };
@@ -115,26 +115,28 @@ function CountryService($http, number_of_choices){
 	var wereAsked = [];
 	var total_quest_setting = null;
 	var number_of_choices = 4;
+	var rightAnswersArray =[];
 
 	$http({
 		method: "GET",
 		url: 	"data/countries.json"
 	}).then( function init(response) {
 				var x = response.data; 
-				for (i=0; i<x.length; i++) {
+				for (var i=0; i<x.length; i++) {
 					if ( (x[i].country !== undefined) && (x[i].country !== null) &&
 						 (x[i].capital !== undefined) && (x[i].capital !== null)) {
 						countries.push(x[i].country);
 						capitals.push(x[i].capital);
-
+						rightAnswersArray.push(x[i].capital);
+						
 						for (var i=0;i<countries.length;i++){
 							wereAsked.push(false);
 						};
 					}
 
 				}
-				console.log(countries);
-				console.log(capitals)
+				// console.log(countries);
+				// console.log(capitals)
 			},
 			function error(response) {
 				console.log('Ошибка при загрузке данных!')
@@ -150,10 +152,30 @@ function CountryService($http, number_of_choices){
 							number_of_choices = response.data.quantity_per_quest;
 						};
 						
+						if (response.data.total_quest > countries.length) {
+							total_quest_setting = countries.length;	
+						} else {
+							var total = countries.length;
+							var n = total_quest_setting;
+							console.log("capitals = "+capitals);
+
+							for (var i=0; (i < (total-n-1)); i++) {
+								var r = Math.floor((Math.random() * (total-i)) + 1 );
+								//array.splice( index, 1 );
+								countries.splice(r, 1);
+								rightAnswersArray.splice(r, 1);
+							}
+							console.log("capitals = "+capitals);
+							console.log("total=" + total);
+							console.log("n=" + n);
+							
+						}
+
 					}, 
 					function errorsetting(response) { 
 						console.log('Ошибка начальной инициализации!')
 					});
+
 
     CountryService.number_of_quests = function () { 
     									return (total_quest_setting || countries.length)
@@ -213,7 +235,7 @@ function CountryService($http, number_of_choices){
 
     CountryService.getRightAnswer = function (country) {
     	var i = countries.indexOf(country);
-    	return capitals[i];
+    	return rightAnswersArray[i];
     }
 
     CountryService.getChoices = function (countryName) {
@@ -231,7 +253,7 @@ function CountryService($http, number_of_choices){
         // доберём ещё (number_of_choices-1) элементов 
         var capitals_already_in_array = [];
 
-        for (i=0; (i<capitals.length); i++) {
+        for (var i=0; (i<capitals.length); i++) {
         	capitals_already_in_array[i] = false;        	
         };	
         capitals_already_in_array[countries.indexOf(countryName)] = true;

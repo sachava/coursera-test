@@ -16,29 +16,15 @@
 	</form>
 	
 	<div class="row">
-	<table class="table-striped  table-hover">
-		<thead ng-if="cntrl.items.length>0">
-		<tr>
-			<th>Name </th>
-			<th>Description</th>
-			<th>Short Name</th>
-		</tr>
-		</thead>
-		<found-item> </found-item>
-		<tr ng-repeat = "item in cntrl.items"> 
-		   <td> {{item.name}} </td>
-		   <td> {{item.description}} </td>
-		   <td> {{item.short_name}} 
-		   </td>
-			<td>
-				<button class="removebtn">Don't want this one!</button>
-			</td>	   
-		<tr>
-	</table>
-	</tr>
+		<found-items my-items="cntrl.found" 
+					 not-empty="cntrl.notEmptyListOfItems();"
+					 on-remove="cntrl.removing(index)"> 
+		</found-items>
+	</div>
 
-	<div class="warninfo" ng-if="cntrl.warning !=='' "> {{cntrl.warning}}</div>
+	<div class="warninfo" ng-if='cntrl.warning() !==""'> {{cntrl.warning()}}</div>
 
+  </div>
   </div>
 </body>
 </html>

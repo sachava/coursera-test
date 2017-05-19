@@ -10,7 +10,12 @@
 	
 	function foundItemsDirective () {
 		var ddo = {
-			templateUrl: "../founditems.html"
+			templateUrl: "../founditems.html",
+			 scope: {
+			 	items: '<myItems',
+			 	notEmpty: '<notEmpty',
+			 	removing: '&onRemove'
+			}
 		}
 		return ddo;
 	};
@@ -18,28 +23,49 @@
 	NarrowItDownController.$inject = ['MenuSearchService'];
 	function NarrowItDownController(MenuSearchService) {
 	   var NarrowItDownController = this;
-	   NarrowItDownController.items = [];
-	   NarrowItDownController.warning = "";
+	   NarrowItDownController.found = [];
+	   MenuSearchService.setEroor("");
 	   NarrowItDownController.searchstring = "";
 
 	   NarrowItDownController.buttonclick = function () {
 	   	    if (NarrowItDownController.searchstring.trim()==="") {
-	   	    	NarrowItDownController.warning = "Nothing found! Enter correct value.";
+	   	    	NarrowItDownController.found = [];
+	   	    	MenuSearchService.setEroor("Nothing found! Enter correct value.");
 	   	    	NarrowItDownController.searchstring = "";
 	   	    } else {
-	   		    NarrowItDownController.items = MenuSearchService.getmatchedMenuItems(NarrowItDownController.searchstring);
+	   		    NarrowItDownController.found = MenuSearchService.getmatchedMenuItems(NarrowItDownController.searchstring);
 	    	};
 	    };
+
+	    NarrowItDownController.notEmptyListOfItems = function () {
+	    	return NarrowItDownController.found.length>0;
+	    }
+
+	    NarrowItDownController.removing = function(index) {
+	    	NarrowItDownController.found.splice(index, 1);
+	    }
+
+	    NarrowItDownController.warning = function () {
+	    	return MenuSearchService.warning;
+	    }
 	};
+
+
 
 	MenuSearchService.$inject = ['URL', '$http'];
 	function MenuSearchService (URL, $http) {
 		var MenuSearchService = this;
 		var items = [];
+		MenuSearchService.warning = "";
+
+		MenuSearchService.setEroor = function (error) {
+			MenuSearchService.warning = error;
+		};
 		
 		MenuSearchService.getmatchedMenuItems = function (searchName) {
 			items = [];
 			searchName = searchName.trim().toLowerCase();
+			MenuSearchService.warning ="";
 			$http({ method: "GET",
 					url: URL
 			}).then(
