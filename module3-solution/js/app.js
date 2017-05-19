@@ -5,7 +5,7 @@
 			.controller('NarrowItDownController', NarrowItDownController)
 			.service('MenuSearchService', MenuSearchService)
 			.directive('foundItems', foundItemsDirective)
-			.constant('URL', 'http://davids-restaurant.herokuapp.com/menu_items.json');
+			.constant('URL', 'https://davids-restaurant.herokuapp.com/menu_items.json');
 
 	
 	function foundItemsDirective () {
