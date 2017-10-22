@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="MenuApp">
+<head>
+	<title>Module 4 Solution</title>
+
+	<script type="text/javascript" src='lib/angular.min.js'></script>
+	<script type="text/javascript" src='lib/angular-ui-router.min.js'></script>
+
+	<!-- modules -->
+	<script type="text/javascript" src="src/menuapp/menuapp.module.js"></script>
+	<script type="text/javascript" src="src/data/data.module.js"></script>
+
+	<!-- service -->
+	<script type="text/javascript" src="src/data/menudata.service.js"></script>
+
+	<!-- components -->
+	<script type="text/javascript" src="src/menuapp/categories.component.js"></script>
+	<script type="text/javascript" src="src/menuapp/items.component.js"></script>
+
+	<!-- controllers -->
+	<script type="text/javascript" src="src/menuapp/categories.controller.js"></script>
+	<script type="text/javascript" src="src/menuapp/items.controller.js"></script>
+
+	<!-- routes -->
+	<script type="text/javascript" src="src/routes.js"></script>
+
+	<!-- styles -->
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+
+</head>
+
+<body>
+	<ui-view></ui-view>
+</body>
+</html>
+
+<!-- need to think about to do next items:
+- maybe nested view for a menu item
+- bootstrape table
+- what about spinner --> 

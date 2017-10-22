@@ -1,0 +1,7 @@
+<strong> {{$ctrl.name}}  </strong>
+
+<p ng-if="$ctrl.desc"> <strong>Special instructions: </strong>{{$ctrl.desc}}</p>
+
+<ul>
+	<li ng-repeat="item in $ctrl.items"> {{item.name}}</li>
+</ul>

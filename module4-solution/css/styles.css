@@ -1,0 +1,10 @@
+h1 {
+	color: #5F00FF;
+	text-align: center;
+}
+
+li[ui-sref]:hover {
+	cursor: pointer;
+	text-decoration: underline;
+	color: #0000FF;
+}
