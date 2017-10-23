@@ -1,0 +1,13 @@
+
+<h3>
+	{{id.name}}
+</h3>
+
+<strong>Description: </strong> {{id.desc}}<BR>
+<BR>
+
+<strong>Price:</strong><BR>
+<span ng-if="id.price_large">${{id.price_large}}</span> <span ng-if="id.large_portion_name"> for {{id.large_portion_name}}</span><BR>
+<span ng-if="id.price_small">${{id.price_small}} </span> <span ng-if="id.small_portion_name">for {{id.small_portion_name}}</span><BR>
+
+<p class="centr"> <spinner-load> </spinner-load> </p>

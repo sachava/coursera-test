@@ -23,6 +23,7 @@
 				categories: ['MenuDataService', function (MenuDataService) {
 					return MenuDataService.getAllCategories().
 					then(function (response) {
+						// console.log(response.data)
 						return response.data
 					});
 				}]
@@ -47,6 +48,12 @@
 			    }]
 			}	
 
+		})
+
+		.state('itemsview.itemdetails', {
+			url: '/itemdetails/{itemid}',
+			templateUrl: 'src/menuapp/templates/itemdetails.template.html',
+			controller: 'itemDetailController as id'
 		})
 
 	}

@@ -1,6 +1,19 @@
-<ul>
+<!-- <ul>
 	<li ng-repeat="item in $ctrl.categories" ui-sref="itemsview({param: $ctrl.categories[$index].short_name })">
 		{{item.name}}
 	</li>
-
 </ul>
+ -->
+
+ <table class="table-striped table-bordered table-hover cats">
+ 	<tr>
+ 		<th>
+ 			Category:
+ 		</th>
+ 	</tr>
+ 	<tr ng-repeat="item in $ctrl.categories" ui-sref="itemsview({param: $ctrl.categories[$index].short_name })">
+ 		<td>
+ 			{{item.name}}
+ 		</td>
+ 	</tr>
+ </table>

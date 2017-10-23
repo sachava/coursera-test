@@ -1,7 +1,33 @@
 <strong> {{$ctrl.name}}  </strong>
 
-<p ng-if="$ctrl.desc"> <strong>Special instructions: </strong>{{$ctrl.desc}}</p>
+<p ng-if="$ctrl.desc" class="desc"> <strong>Special instructions: </strong>{{$ctrl.desc}}</p>
 
-<ul>
+<!-- <ul>
 	<li ng-repeat="item in $ctrl.items"> {{item.name}}</li>
-</ul>
+</ul> -->
+
+<div class="container">
+<div class="row"> 
+<div class="col-xs-6">
+<table class="table-striped table-bordered table-hover">
+	<tr>
+		<th>Menu items:</th>
+	</tr>
+	<tr ng-repeat="item in $ctrl.items" ui-sref="itemsview.itemdetails({itemid:$index})">
+		<td>
+			{{item.name}}
+		</td>
+<!-- 		<td>
+			{{item.description}}
+		</td> -->
+	</tr>
+</table>
+</div>
+
+<div>
+
+<ui-view> </ui-view>
+</div>
+
+</div> 
+</div>

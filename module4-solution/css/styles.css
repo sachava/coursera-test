@@ -1,10 +1,37 @@
 h1 {
-	color: #5F00FF;
+	color: #107f0F;
 	text-align: center;
+}
+
+ul {
+	margin-top: 25px;
 }
 
 li[ui-sref]:hover {
 	cursor: pointer;
 	text-decoration: underline;
 	color: #0000FF;
+}
+
+tr[ui-sref]:hover {
+	cursor: pointer;	
+    /*text-decoration: underline;*/
+	color: #0000FF;
+
+	background-color: #F80101;
+}
+
+.centr {
+	margin-top: 25px;
+	text-align: center;
+}
+
+.container, .desc, table {
+	margin-top: 15px; 
+}
+.cats {
+	margin: 0px auto;
+}
+td, th {
+	padding: 8px
 }
