@@ -5,6 +5,10 @@ h1 {
 
 ul {
 	margin-top: 25px;
+  	columns: 3;
+    -webkit-columns: 3;
+    -moz-columns: 3;
+
 }
 
 li[ui-sref]:hover {
