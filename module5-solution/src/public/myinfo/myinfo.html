@@ -1,0 +1,27 @@
+<h2>Registered information</h2>
+
+<div ng-if="!mi_ctrl.first_name" class="myinfo">
+	
+	Not Signed Yet. <a ui-sref="public.signup"> Sign Up Now!</a>
+
+</div>
+
+<div ng-if="mi_ctrl.first_name" class="myinfo">
+	First Name: <strong>{{mi_ctrl.first_name}}</strong>
+	<br>
+	Last Name: <strong>{{mi_ctrl.last_name}}</strong>
+	<br> 
+	E-mail address:<strong> {{mi_ctrl.email_address}}</strong>
+	<br>
+	Phone number: <strong>{{mi_ctrl.phone_number}}</strong>
+	<br>
+	Favorite dish: <strong>{{mi_ctrl.menu_number}}</strong>
+	<br>
+
+	<strong>{{mi_ctrl.data.name}} </strong>
+	<img class="img-responsive" width="250" height="150" ng-src="{{mi_ctrl.base_path}}/images/{{mi_ctrl.menu_number}}.jpg" alt="{{mi_ctrl.data2.data.name}}">
+
+	
+	{{mi_ctrl.data.description}}
+
+</div>

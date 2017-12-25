@@ -1,0 +1,65 @@
+<h2 class="sutitle"> Sign-Up Form</h2>
+
+<form name="SignUpForm" novalidate>
+	<div>
+		<label for="fn_id"> First Name: </label>
+		<input id="fn_id" type="text" name="firstName" class="inp" placeholder="Enter your first name" align="right" autofocus
+		ng-model="su_ctrl.first_name"
+		required>
+		<span ng-if="SignUpForm.firstName.$error.required&&SignUpForm.firstName.$touched">
+			First name is required!
+		</span>
+	</div>
+
+	<div>
+		<label for="ln_id"> Last Name: </label>
+		<input type="text"  id ="ln_id" name="lastname" class="inp" placeholder="Enter your last name" align="right" 
+		ng-model="su_ctrl.last_name"
+		required>
+		<span ng-if="SignUpForm.lastname.$error.required&&SignUpForm.lastname.$touched">
+			Last name is required!
+		</span>
+	</div>
+
+	<div>
+		<label for="email_id"> E-mail address: </label>
+		<input type="email" id="email_id" name="email" class="inp" placeholder="Enter your e-mail address" align="right" 
+		ng-model="su_ctrl.email_address"
+		required> 
+		<span ng-if="SignUpForm.email.$invalid&&SignUpForm.email.$touched">
+			Must be a valid email address!
+		</span>		
+	</div>
+	
+	<div>
+		<label for="ph_id"> Phone number: </label>
+		<input type="text" id="ph_id" name="phone" class="inp" placeholder="Enter your phone" align="right" 
+		ng-model="su_ctrl.phone_number"
+		required>
+		<span ng-if="SignUpForm.phone.$error.required&&SignUpForm.phone.$touched">
+			Phone number is required!
+		</span>
+	</div>
+
+	<div>
+		<label for="fd_id"> Favorite dish: </label>
+		<input type="text" id="fd_id" name="menuNumber" class="inp" placeholder="Enter menu number" align="right" 
+		ng-model="su_ctrl.menu_number"
+		required>
+		<span ng-if="SignUpForm.menuNumber.$error.required&&SignUpForm.menuNumber.$touched">
+			Menu number is required!
+		</span>
+
+		<span ng-if="!su_ctrl.menu_number_exists">
+			No such menu number exists!
+		</span>		
+	</div>
+
+	<button type="submit" class="signupbutton" 
+			ng-click="su_ctrl.go()"
+			ng-disabled="SignUpForm.$invalid">Submit</button>
+	
+	<div ng-if="su_ctrl.saved" class="saved">
+			Your information has been saved!
+	</div>		
+</form>
