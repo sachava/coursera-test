@@ -372,14 +372,75 @@
 "weight": "15"
 },
 
-{ "section":"North_America", "topic": "explorations", "type": "0", "image": "img/n_america/na.jpg", "weight": "10", "level": "1",
+{ "section":"North_America", "topic": "explorations", "type": "0", "image": "img/n_america/na.jpg", "weight": "15", "level": "1",
 "question": "Как называется мыс, который является крайней точкой Северной Америки на юге?",
 "answers": ["мыс Мёрчисон", "мыс Марьято", "мыс Принца Уэльского", "мыс Сент-Чарльз"],
-"right_answer": ["мыс Марьято"],
-"level": "1",
-"weight": "15"
+"right_answer": ["мыс Марьято"]
+},
+
+{ "section":"North_America", "topic": "explorations", "type": "0", "image": "img/n_america/na.jpg", "weight": "5", "level": "1",
+"question": "Правда ли, что Северная и Южная Америка образуют одну часть света?",
+"answers": ["да", "нет"],
+"right_answer": ["да"]
+},
+
+{ "section":"North_America", "topic": "explorations", "type": "0", "image": "img/n_america/na.jpg", "weight": "10", "level": "1",
+"question": "Что определяет большое разнообразие природных условий Северной Америки?",
+"answers": ["вытянутость материка с севера на юг", "то, что по форме материк напоминает треугольник", "расположение материка в Северном полушарии", "пассаты"],
+"right_answer": ["вытянутость материка с севера на юг"]
+},
+
+
+{ "section":"North_America", "topic": "explorations", "type": "2", "image": "img/n_america/na.jpg", "weight": "10", "level": "1",
+"question": "Какие океаны омывают берега Северной Америки?",
+"answers": ["Тихий", "Атлантический", "Северный Ледовитый", "Индийский"],
+"right_answer": ["Тихий", "Атлантический", "Северный Ледовитый"]
+},
+
+{ "section":"North_America", "topic": "explorations", "type": "2", "image": "img/n_america/na.jpg", "weight": "20", "level": "1",
+"question": "Выберите полуострова Северной Америки?",
+"answers": ["Аляска", "Калифорния", "Лабрадор", "Флорида", "Юкатан", "Пиринейский", "Аравийский"],
+"right_answer": ["Аляска", "Калифорния", "Лабрадор", "Флорида", "Юкатан"]
+},
+
+
+{ "section":"North_America", "topic": "explorations", "type": "2", "image": "img/n_america/na.jpg", "weight": "12", "level": "1",
+"question": "Какие острова находятся вблизи берегов Северной Америки?",
+"answers": ["Гренландия", "Ньюфауленд", "Малые Антильские острова", "Огненная земля", "Мадагаскар"],
+"right_answer": ["Гренландия", "Ньюфауленд", "Малые Антильские острова"]
+},
+
+
+{ "section":"North_America", "topic": "explorations", "type": "0", "image": "img/n_america/na.jpg", "weight": "12", "level": "1",
+"question": "Сколько примерно островов насчитывает Канадский Арктический архипелаг?",
+"answers": ["15", "300", "3 000", "35 000"],
+"right_answer": ["35 000"]
+},
+
+
+{ "section":"North_America", "topic": "explorations", "type": "1", "image": "img/n_america/na.jpg", "weight": "12", "level": "1",
+"question": "Как называется большой залив на севере Северной Америки, который часто называют 'мешок со льдом'?",
+"answers": [""],
+"right_answer": ["Гудзонов", "Гудзонов залив"]
+},
+
+
+{ "section":"North_America", "topic": "explorations", "type": "1", "image": "img/n_america/na.jpg", "weight": "12", "level": "1",
+"question": "Как называется большой залив на юге Северной Америки, который часто называют 'раскаленная сковородка'?",
+"answers": [""],
+"right_answer": ["Мексиканский", "Мексиканский залив"]
+},
+
+{ "section":"North_America", "topic": "explorations", "type": "0", "image": "img/n_america/na.jpg", "weight": "10", "level": "1",
+"question": "На что влияет изрезанность берегов Северной Америки?",
+"answers": ["на образование высоких морских приливов", "на количество осадков", "на образование теплых течений"],
+"right_answer": ["на образование высоких морских приливов"]
+},
+
+{ "section":"North_America", "topic": "explorations", "type": "0", "image": "img/n_america/na.jpg", "weight": "10", "level": "1",
+"question": "Кто возглавлял экспедицию, которая в 1497-98 годах прошла вдоль восточного берега Северной Америки от острова Ньюфаундленд почти до полуострова Флорида?",
+"answers": ["Джон Кабот", "Витус Ьеринг", "Христофор Колумб", "Фернан Магеллан"],
+"right_answer": ["Джон Кабот"]
 }
-
-
 
 ]
