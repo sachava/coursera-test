@@ -1,0 +1,76 @@
+<h3>{{tctrl.topic}}</h3>
+ 
+<div class="quest" ng-if="tctrl.visible">
+	{{tctrl.NumberOfAskedQuestions + 1}}.&nbsp;
+	{{tctrl.question}}
+	
+</div>
+
+<BR>
+
+<loading> </loading>
+
+<div class="row">
+
+	<div ng-if="(tctrl.visible&&(tctrl.image!==''))" class="col-xs-6">
+		<img width="50%" ng-src="{{tctrl.image}}">
+	</div>
+
+
+	<div class="col-xs-6">
+	<form>
+		<div ng-if="((tctrl.type==='0')&&tctrl.visible)" class="radio" autofocus>
+			<div ng-repeat="var in tctrl.answers">
+			  	<label>	
+		      		<input type="radio" ng-model="tctrl.variantName" ng-value="var" name="var-picker"> &nbsp; {{var}}
+		      	</label>
+		    	<BR>
+		    </div>
+		</div>
+
+		<div ng-if="((tctrl.type==='1')&&tctrl.visible)">
+				<input type="text" ng-model="tctrl.variantName" placeholder="Введите ответ!" name="answerEdit" autofocus> 
+			    	<BR>
+		</div>
+
+		<div ng-if="((tctrl.type==='2')&&tctrl.visible)" class="checkbox">
+			<div ng-repeat="var in tctrl.answers">	
+				<label>
+    				<input type="checkbox" ng-model="tctrl.comboVariants[$index]">
+    						<!-- ng-true-value="'YES'" ng-false-value="'NO'" -->
+    					{{var}}
+  				</label>
+  			</div>
+		</div>
+
+
+		<button ng-click="tctrl.nextButtonClick()" ng-if="tctrl.visible" type=submit> {{tctrl.buttonName}} </button>
+		</form>
+	</div> <!-- col -->
+</div> <!-- row -->
+
+<div ng-if="!tctrl.visible">
+	Ваш результат: <BR>
+	<span ng-if="tctrl.proc()<75" class="red">
+		{{tctrl.proc()}}%
+	</span>
+			<span ng-if="tctrl.proc()>=75" class="green">
+				{{tctrl.proc()}}%
+			</span>
+
+	<BR>
+	{{tctrl.Points}} баллов из {{tctrl.TotalPoints}}
+	<BR>
+	<BR>
+	
+	<p ng-if="(tctrl.RightAnswers < tctrl.NumberOfAskedQuestions)">
+		<div ng-if="(tctrl.NumberOfAskedQuestions-tctrl.RightAnswers)>1"> Найдите правильные ответы на следующие вопросы: </div>
+		<div ng-if="(tctrl.NumberOfAskedQuestions-tctrl.RightAnswers)===1"> Найдите правильный ответ на следующий вопрос:</div>
+		<ul>
+			<li ng-repeat="wr in tctrl.WrongAnswers">{{wr.question}}</li>
+		</ul>
+	</p>
+
+	<BR>
+	<a ui-sref="home.main">Вернуться на главную</a>
+</div>

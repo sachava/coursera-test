@@ -1,0 +1,41 @@
+h1 {
+	margin-bottom: 5%;
+	text-align: center;
+}
+h3 {
+	font-size: 1.5em;
+}
+
+input[type=radio] {
+/*	margin-bottom: 10px;*/
+	font-weight: 200;
+}
+.quest {
+/*	margin-top: 25px;
+	margin-bottom: 10px;*/
+}
+button {
+	margin-top: 25px;
+}
+.green {
+	color: #1abb5c;
+	font-size: 1.5em;
+}
+.red {
+	color: #FF0000;
+	font-size: 1.5em;
+}
+
+.loading-indicator {
+	display: block;
+	width: 70px;
+	position: fixed;
+	margin: 0 auto;
+	top: 40%;
+	z-index: 100;
+	background-color: #fff;
+}
+.loading-indicator img {
+	width: 70px;
+	background-color: #fff;
+}

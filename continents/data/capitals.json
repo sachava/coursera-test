@@ -1,0 +1,242 @@
+[
+{
+"id": "0",
+"country": "Египет",
+"capital": "Каир",
+"continent": "Africa",
+"level": "1"
+},
+
+{
+"id": "1",
+"country": "Ливия",
+"capital": "Триполи",
+"continent": "Africa",
+"level": "1"
+},
+
+{
+"id": "2",
+"country": "Алжир",
+"capital": "Алжир",
+"continent": "Africa",
+"level": "1"
+},
+
+{
+"id": "3",
+"country": "Марокко",
+"capital": "Рабат",
+"continent": "Africa",
+"level": "1"
+},
+
+{
+"id": "4",
+"country": "Тунис",
+"capital": "Тунис",
+"continent": "Africa",
+"level": "1" 
+},
+
+{
+"id": "5",
+"country": "Судан",
+"capital": "Хартум",
+"continent": "Africa",
+"level": "1" 
+},
+
+{
+"id": "6",
+"country": "Мавритания",
+"capital": "Нуакшот",
+"continent": "Africa",
+"level": "1" 
+},
+
+{
+"id": "7",
+"country": "Мали",
+"capital": "Бамако",
+"continent": "Africa",
+"level": "1" 
+},
+
+{
+"id": "8",
+"country": "Чад",
+"capital": "Нджамена",
+"continent": "Africa",
+"level": "1" 
+},
+
+{
+"id": "9",
+"country": "Нигер",
+"capital": "Ниамей",
+"continent": "Africa",
+"level": "1" 
+},
+
+{
+"id": "10",
+"country": "Нигерия",
+"capital": "Абуджа",
+"continent": "Africa",
+"level": "1" 
+},
+
+{
+"id": "11",
+"country": "Центрально-Африкaнская Республика",
+"capital": "Банги",
+"continent": "Africa",
+"level": "1"
+},
+
+{
+"id": "12",
+"country": "Эфиопия",
+"capital": "Аддис-Абеба",
+"continent": "Africa",
+"level": "1" 
+},
+
+{
+"id": "13",
+"country": "Сомали",
+"capital": "Могадишо",
+"continent": "Africa",
+"level": "1" 
+},
+
+{
+"id": "14",
+"country": "Кения",
+"capital": "Найроби",
+"continent": "Africa",
+"level": "1" 
+},
+
+{
+"id": "15",
+"country": "Демократическая республика Конго",
+"capital": "Киншаса",
+"continent": "Africa",
+"level": "1" 
+},
+
+{
+"id": "16",
+"country": "Камерун",
+"capital": "Яунде",
+"continent": "Africa",
+"level": "1" 
+},
+
+{"id": "17", "country": "Танзания", "capital": "Додома", "continent": "Africa", "level": "1" },
+
+{
+"id": "18",
+"country": "Замбия",
+"capital": "Лусака",
+"continent": "Africa",
+"level": "1" 
+},
+
+{
+"id": "19",
+"country": "Мозамбик",
+"capital": "Мапуту",
+"continent": "Africa",
+"level": "1" 
+},
+
+{
+"id": "20",
+"country": "Мадагаскар",
+"capital": "Антананананананариву",
+"continent": "Africa",
+"level": "1" 
+},
+
+{
+"id": "21",
+"country": "Зимбабве",
+"capital": "Хараре",
+"continent": "Africa",
+"level": "1" 
+},
+
+{
+"id": "22",
+"country": "Ботсвана",
+"capital": "Габороне",
+"continent": "Africa",
+"level": "1" 
+},
+
+{
+"id": "23",
+"country": "Намибия",
+"capital": "Виндгук",
+"continent": "Africa",
+"level": "1" 
+},
+
+{
+"id": "24",
+"country": "Южно-Africaнская Республика",
+"capital": "Претория",
+"continent": "Africa",
+"level": "1" 
+},
+{"id": "25", "country": "Гана",  "capital":  "Аккра", "continent": "Africa","level": "1" },
+{"id": "26", "country": "Либерия",  "capital":  "Монровия", "continent": "Africa","level": "1" },
+{"id": "27", "country": "Сенегал",  "capital":  "Дакар", "continent": "Africa","level": "1" },
+
+{"id": "28", "country": "САДР",  "capital":  "Эль-Аюн", "continent": "Africa","level": "2" },
+{"id": "29", "country": "Бенин", "capital": "Порто-Ново", "continent": "Africa","level": "2" },
+{"id": "30", "country": "Буркина-Фасо",  "capital":  "Уагадугу", "continent": "Africa","level": "2" },
+{"id": "31", "country": "Гамбия",  "capital":  "Банжул", "continent": "Africa","level": "2" },
+
+{"id": "32", "country": "Гвинея",  "capital":  "Конакри", "continent": "Africa","level": "2" },
+{"id": "33", "country": "Гвинея-Бисау",  "capital":  "Бисау", "continent": "Africa","level": "2" },
+{"id": "34", "country": "Кабо-Верде",  "capital":  "Прая", "continent": "Africa","level": "2" },
+{"id": "35", "country": "Кот-д’Ивуар",  "capital":  "Ямусукро", "continent": "Africa","level": "2" },
+{"id": "36", "country": "Сьерра-Леоне",  "capital":  "Фритаун", "continent": "Africa","level": "2" },
+{"id": "37", "country": "Того",  "capital":  "Ломе", "continent": "Africa","level": "2" },
+{"id": "38", "country": "Габон",  "capital":  "Либревиль", "continent": "Africa","level": "2" },
+{"id": "39", "country": "Республика Конго",  "capital":  "Браззавиль", "continent": "Africa","level": "2" },
+{"id": "40", "country": "Сан-Томе и Принсипи",  "capital":  "Сан-Томе", "continent": "Africa","level": "2" },
+{"id": "41", "country": "Экваториальная Гвинея",  "capital":  "Малабо", "continent": "Africa","level": "2" },
+{"id": "42", "country": "Бурунди",  "capital":  "Бужумбура", "continent": "Africa","level": "2" },
+{"id": "43", "country": "Джибути",  "capital":  "Джибути", "continent": "Africa","level": "2" },
+{"id": "44", "country": "Руанда", "capital":  " Кигали", "continent": "Africa","level": "2" },
+{"id": "45", "country": "Уганда",  "capital":  "Кампала", "continent": "Africa","level": "2" },
+{"id": "46", "country": "Эритрея",  "capital":  "Асмэра", "continent": "Africa","level": "2" },
+{"id": "47", "country": "Южный Судан",  "capital":  "Джуба", "continent": "Africa","level": "2" },
+{"id": "48", "country": "Коморы",  "capital":  "Морони", "continent": "Africa","level": "2" },
+{"id": "49", "country": "Лесото",  "capital":  "Масеру", "continent": "Africa","level": "2" },
+{"id": "50", "country": "Маврикий",  "capital":  " Порт-Луи", "continent": "Africa","level": "2" },
+{"id": "51", "country": "Малави",  "capital":  "Лилонгве", "continent": "Africa","level": "2" },
+{"id": "52", "country": "Свазиленд",  "capital":  "Мбабане", "continent": "Africa","level": "2" },
+{"id": "53", "country": "Сейшельские Острова", "capital":"Виктория", "continent": "Africa","level": "2" },
+
+{"id": "101", "country": "Аргентина", "capital":"Буэнос-Айрес", "continent": "South_America","level": "1" },
+{"id": "102", "country": "Боливия", "capital":"Сукре", "continent": "South_America","level": "1" },
+{"id": "103", "country": "Бразилия", "capital":"Бразилиа", "continent": "South_America","level": "1", "var1": ["Сан-Паулу", "Рио-де-Жанейро"] },
+{"id": "104", "country": "Венесуэла", "capital":"Каракас", "continent": "South_America","level": "1" },
+{"id": "105", "country": "Гайана", "capital":"Джорджтаун", "continent": "South_America","level": "1" },
+{"id": "106", "country": "Колумбия", "capital":"Богота", "continent": "South_America","level": "1" },
+{"id": "107", "country": "Парагвай", "capital":"Асунсьон", "continent": "South_America","level": "1" },
+{"id": "108", "country": "Перу", "capital":"Лима", "continent": "South_America","level": "1" },
+{"id": "109", "country": "Суринам", "capital":"Парамарибо", "continent": "South_America","level": "1" },
+{"id": "110", "country": "Уругвай", "capital":"Монтевидео", "continent": "South_America","level": "1" },
+{"id": "111", "country": "Чили", "capital":"Сантьяго", "continent": "South_America","level": "1" },
+{"id": "112", "country": "Эквадор", "capital":"Кито", "continent": "South_America","level": "1" }
+
+
+
+]

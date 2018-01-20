@@ -1,0 +1,84 @@
+
+<div class="quest" ng-if="capctrl.visible">
+	{{capctrl.question}}
+</div>
+
+<BR>
+
+<loading> </loading>
+
+<div class="row">
+	<div ng-if="capctrl.visible&&((capctrl.variant===2)||(capctrl.variant===3))" class="col-xs-6">
+		<img width="50%" ng-src="{{capctrl.image}}">
+	</div>
+
+	<div class="col-xs-6">
+		<div class="radio" ng-if="capctrl.visible">
+			<div ng-repeat="var in capctrl.answers">
+			  	<label>	
+		      		<input type="radio" ng-model="capctrl.variantName" ng-value="var" name="var-picker" > &nbsp; {{var}}
+		      	</label>
+		    	<BR>
+		    </div>
+		</div>
+
+		<button ng-click="capctrl.nextButtonClick()" ng-if="capctrl.visible"> {{capctrl.buttonName}} </button>
+	</div> <!-- col -->
+</div> <!-- row -->
+
+	<div ng-if="!capctrl.visible">
+		Ваш результат: <BR>
+		<span ng-if="capctrl.proc()<75" class="red">
+			{{capctrl.proc()}}%
+		</span>
+				<span ng-if="capctrl.proc()>=75" class="green">
+					{{capctrl.proc()}}%
+				</span>
+
+		<BR>
+		{{capctrl.RightAnswers}} из {{capctrl.NumberOfAskedQuestions}}
+		<BR>
+		<BR>
+		
+		<p ng-if="(capctrl.RightAnswers < capctrl.NumberOfAskedQuestions)">
+			<div ng-if="capctrl.variant===0">
+				<div ng-if="(capctrl.NumberOfAskedQuestions-capctrl.RightAnswers)>1"> Повторите столицы государств: </div>
+				<div ng-if="(capctrl.NumberOfAskedQuestions-capctrl.RightAnswers)===1"> Повторите столицу государства:</div>
+			</div>
+
+			<div ng-if="capctrl.variant===1">
+				<div ng-if="(capctrl.NumberOfAskedQuestions-capctrl.RightAnswers)>1"> Узнайте столицы каких государств: </div>
+				<div ng-if="(capctrl.NumberOfAskedQuestions-capctrl.RightAnswers)===1"> Узнайте столица какого государства государства:</div>
+			</div>
+
+			<div ng-if="capctrl.variant===2">
+				<div ng-if="(capctrl.NumberOfAskedQuestions-capctrl.RightAnswers)>1"> Повторите на карте местонахождение государств: </div>
+				<div ng-if="(capctrl.NumberOfAskedQuestions-capctrl.RightAnswers)===1"> Повторите на карте местонахождение государства:</div>
+			</div>
+
+			<div ng-if="capctrl.variant===3">
+				<div ng-if="(capctrl.NumberOfAskedQuestions-capctrl.RightAnswers)>1"> Повторите флаги государств: </div>
+				<div ng-if="(capctrl.NumberOfAskedQuestions-capctrl.RightAnswers)===1"> Повторите флаг государства:</div>
+			</div>
+
+				<BR>
+					<ul>
+						<li ng-repeat="wr in capctrl.WrongAnswers">
+							<span ng-if="(capctrl.variant===0) ||(capctrl.variant===1)">
+								<a href="https://ru.wikipedia.org/wiki/{{wr.quest}}" target="_blank">
+								{{wr.quest}}
+								</a>
+							</span>
+							
+							<span ng-if="(capctrl.variant===2) ||(capctrl.variant===3)">
+							<a href="https://ru.wikipedia.org/wiki/{{wr.rightAnswer}}" target="_blank">
+							{{wr.rightAnswer}}
+							</a>
+							</span>
+						</li>
+					</ul>
+			
+		</p>
+		<BR>
+		<a ui-sref="home.main">Вернуться на главную</a>
+	</div>

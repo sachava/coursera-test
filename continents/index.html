@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Geography</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+
+<body ng-app="main">
+	<div class="container">
+		<div class="row">
+			<ui-view> </ui-view>
+		</div>
+	</div> <!-- container -->
+
+	<!-- libs -->
+	<script type="text/javascript" src="lib/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="lib/bootstrap.min.js"></script>
+	<script type="text/javascript" src="lib/angular.min.js"></script>
+	<script type="text/javascript" src="lib/angular-ui-router.min.js"></script>
+	<script type="text/javascript" src="lib/sslib.js"></script>
+
+	<!-- main -->
+	<script type="text/javascript" src="src/main.module.js"></script>
+	<script type="text/javascript" src="src/main.routes.js"></script>
+
+	<!-- config -->
+	<script type="text/javascript" src="src/config/config.module.js"></script>
+	<script type="text/javascript" src="src/config/config.routes.js"></script>
+	<script type="text/javascript" src="src/loading/loading.component.js"></script>
+	<script type="text/javascript" src="src/loading/loading.interceptor.js"></script>
+
+	<!-- capitals -->
+	<script type="text/javascript" src="src/capitals/capitals.module.js"></script>
+	<script type="text/javascript" src="src/capitals/capitals.routes.js"></script>
+	<script type="text/javascript" src="src/capitals/capitals.service.js"></script>
+	<script type="text/javascript" src="src/capitals/capitals.controller.js"></script>
+
+	<!-- tests -->
+	<script type="text/javascript" src="src/tests/tests.module.js"></script>
+	<script type="text/javascript" src="src/tests/tests.routes.js"></script>
+	<script type="text/javascript" src="src/tests/tests.service.js"></script>
+	<script type="text/javascript" src="src/tests/tests.controller.js"></script>
+
+
+</body>
+
+</html>
